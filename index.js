@@ -7,4 +7,5 @@ const port = 5000
 server.listen(port, () => {
   console.log('GREAT SCOTT, IT\'S WORKING!!!!')
   console.log(`Listening on port ${port}`)
+  console.log('------------------------------')
 })
