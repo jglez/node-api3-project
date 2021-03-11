@@ -1,6 +1,9 @@
 // Import Express from node_modules
 const express = require('express');
 
+/***** Import Users Router *****/
+const usersRouter = require('./users/users-router')
+
 /***** Import Custom Middlewares *****/
 const { logger } = require('./middleware/middleware.js')
 
@@ -9,6 +12,13 @@ const server = express();
 
 // Enable Express to parse JSON bodies
 server.use(express.json())
+
+/***** Use Users Router *****/
+server.use('/api/users', usersRouter)
+
+
+
+
 
 // global middlewares and the user's router need to be connected here
 server.use(logger)
